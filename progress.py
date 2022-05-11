@@ -27,7 +27,7 @@ def get_leetcode(id):
     profiletext["variables"] = {"userSlug":leetcode_id}
     profiletext = json.dumps(profiletext).encode(encoding='utf-8')
     header_dict = {'Accept': '*/*', 'Content-Type': 'application/json'}
-    url = 'https://leetcode-cn.com/graphql/'
+    url = 'https://leetcode.cn/graphql/'
     # POST请求
     req1 = request.Request(url=url, data=progresstext, headers=header_dict, method='POST')
     req2 = request.Request(url=url, data=profiletext, headers=header_dict, method='POST')
